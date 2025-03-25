@@ -8,6 +8,7 @@ import "./i18n"
 import { routeTree } from "./routeTree.gen"
 import { genQueryClient } from "@/utils/queryClient"
 import { QueryClientProvider } from "@tanstack/react-query"
+import { ThemeProvider } from "next-themes"
 
 const queryClient = genQueryClient()
 
@@ -29,7 +30,13 @@ declare module "@tanstack/react-router" {
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        storageKey="vite-ui-theme"
+      >
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>
 )
