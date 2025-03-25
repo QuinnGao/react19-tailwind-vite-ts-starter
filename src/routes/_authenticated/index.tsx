@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
-import Main from "@/layout/main"
+import Layout from "@/layout/index"
 
 export const Route = createFileRoute("/_authenticated/")({
-  component: Main,
+  component: Layout,
 })

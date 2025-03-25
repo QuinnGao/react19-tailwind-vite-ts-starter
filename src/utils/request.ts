@@ -7,7 +7,6 @@ import Axios, {
 } from "axios"
 import { ContentTypeEnum, ResultEnum } from "@/interfaces/requestEnum"
 import { toast } from "sonner"
-import NProgress from "./progress"
 
 import { useAuthStore } from "@/stores/authStore"
 import { USER_TOKEN } from "@/constants"
@@ -26,7 +25,6 @@ const configDefault = {
 async function requestHandler(
   config: InternalAxiosRequestConfig
 ): Promise<InternalAxiosRequestConfig> {
-  NProgress.start()
   const token = useAuthStore.getState().auth.token
   if (token) config.headers.set(USER_TOKEN, token)
 
@@ -36,7 +34,6 @@ async function requestHandler(
 async function responseHandler(
   response: AxiosResponse
 ): Promise<AxiosResponse> {
-  NProgress.done()
   const { data } = response
   const { code, msg } = data
   if (code !== ResultEnum.SUCCESS) {
@@ -46,7 +43,6 @@ async function responseHandler(
 }
 
 async function responseErrorHandler(error: AxiosError): Promise<AxiosError> {
-  NProgress.done()
   // HTTP 状态码
   const status = error.response?.status
   const statusMessages: Record<number, string> = {
