@@ -1,0 +1,14 @@
+{
+    "400": "Bad Request",
+    "401": "Unauthorized, please log in",
+    "403": "Access Denied",
+    "404": "Request URL Error:",
+    "408": "Network Request Timeout",
+    "500": "Internal Server Error",
+    "501": "Service Not Implemented",
+    "502": "Gateway Error",
+    "503": "Service Unavailable",
+    "504": "Gateway Timeout",
+    "505": "HTTP Version Not Supported",
+    "default": "Network Connection Failure"
+}

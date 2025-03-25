@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import Cookies from "js-cookie"
-import { USER_TOKEN } from "@/interfaces"
+import { USER_TOKEN } from "@/constants"
 
 interface AuthState {
   auth: {

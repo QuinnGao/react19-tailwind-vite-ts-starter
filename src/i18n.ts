@@ -3,17 +3,23 @@ import { initReactI18next } from "react-i18next"
 import enError from "./locales/en/error.json"
 import cnError from "./locales/cn/error.json"
 import jaError from "./locales/jp/error.json"
+import enRequest from "./locales/en/request.json"
+import cnRequest from "./locales/cn/request.json"
+import jpRequest from "./locales/jp/request.json"
 
 export const defaultNS = "error"
 export const resources = {
   en: {
     error: enError,
+    request: enRequest,
   },
   cn: {
     error: cnError,
+    request: cnRequest,
   },
   jp: {
     error: jaError,
+    request: jpRequest,
   },
 } as const
 
