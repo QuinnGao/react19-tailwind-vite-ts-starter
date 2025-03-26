@@ -1,6 +1,6 @@
 import { createRootRouteWithContext, Outlet } from "@tanstack/react-router"
 import { QueryClient } from "@tanstack/react-query"
-import { TanStackRouterDevtools } from "@tanstack/router-devtools"
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
 import { Toaster } from "@/components/ui/sonner"
 import GeneralError from "@/features/errors/general-error"
 import NotFoundError from "@/features/errors/not-found-error"

@@ -36,7 +36,7 @@
     "@tanstack/eslint-plugin-query": "^5.68.0",
     "@tanstack/eslint-plugin-router": "^1.114.12",
     "@tanstack/react-query-devtools": "^5.69.0",
-    "@tanstack/router-devtools": "^1.114.4",
+    "@tanstack/react-router-devtools": "^1.114.27",
     "@tanstack/router-plugin": "^1.114.4",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.13.10",
